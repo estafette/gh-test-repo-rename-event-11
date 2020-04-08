@@ -1,0 +1,25 @@
+builder:
+  track: dev
+
+labels:
+  team: estafette-team
+  language: golang
+
+version:
+  semver:
+    major: 0
+    minor: 1
+
+stages:
+  build:
+    image: golang:1.13.0-alpine3.10
+    commands:
+    - echo "hi"
+
+releases:
+  test:
+    stages:
+      build:
+        image: golang:1.13.0-alpine3.10
+        commands:
+        - echo "hi"
